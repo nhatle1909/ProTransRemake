@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\DevTools\\Repository\\ProTransRemake\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\dbcontextoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dbcontextoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C892AD0-0BDE-429B-98E6-8DDA469D1ACF}|Domain\\Domain.csproj|d:\\devtools\\repository\\protransremake\\domain\\enums\\filetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C892AD0-0BDE-429B-98E6-8DDA469D1ACF}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\filetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,11 +42,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBContextOptions.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\DBContextOptions.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DBContextOptions.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\DBContextOptions.cs",
+              "RelativeToolTip": "Infrastructure\\DBContextOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T14:29:48.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\GenericRepository.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\GenericRepository.cs",
+              "RelativeToolTip": "Infrastructure\\GenericRepository.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAApwHQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T14:28:26.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\DbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DbContext.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\DbContext.cs",
+              "RelativeToolTip": "Infrastructure\\DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:33:09.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FileType.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Domain\\Enums\\FileType.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\FileType.cs",
@@ -42,12 +93,11 @@
               "RelativeToolTip": "Domain\\Enums\\FileType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:46:51.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:46:51.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Gender.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\Gender.cs",
@@ -55,12 +105,11 @@
               "RelativeToolTip": "Domain\\Enums\\Gender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:46:50.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:46:50.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "OrderStatus.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Domain\\Enums\\OrderStatus.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\OrderStatus.cs",
@@ -68,12 +117,11 @@
               "RelativeToolTip": "Domain\\Enums\\OrderStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:46:45.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:46:45.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "BaseAccount.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Domain\\Entities\\BaseAccount.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\BaseAccount.cs",
@@ -81,12 +129,11 @@
               "RelativeToolTip": "Domain\\Entities\\BaseAccount.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAASwA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:14:56.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T10:14:56.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\BaseEntity.cs",
@@ -94,8 +141,7 @@
               "RelativeToolTip": "Domain\\Entities\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T09:40:30.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T09:40:30.702Z"
             }
           ]
         }
