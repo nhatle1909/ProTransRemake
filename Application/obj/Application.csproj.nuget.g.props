@@ -16,7 +16,4 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.3\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.3\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
   </ImportGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgZ_EntityFramework_Classic Condition=" '$(PkgZ_EntityFramework_Classic)' == '' ">C:\Users\nle75\.nuget\packages\z.entityframework.classic\7.1.7</PkgZ_EntityFramework_Classic>
-  </PropertyGroup>
 </Project>
