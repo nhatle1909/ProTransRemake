@@ -10,13 +10,13 @@ namespace Application.Interface
 {
     public interface IGenericRepository<TEntities> where TEntities : BaseEntity
     {
-        public Task<bool> AddItemAsync(TEntities item);
-        public Task<(string, bool)> RemoveItemAsync(Guid Id);
-        public Task<(string, bool)> SoftRemoveItemAsync(Guid Id);
-        public Task<(string, TEntities)> GetByIdAsync(Guid Id);
-        public Task<(string, bool)> UpdateItemAsync(TEntities newItem);
-        public Task<(IEnumerable<TEntities>, string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null, string? sortField = null, bool isAsc = false, int pageSize = 5, int skip = 1);
-        public Task<(IEnumerable<TEntities>, string)> GetByFilterAsync(Expression<Func<TEntities, bool>>? filter = null, string? includeProperties = null);
+        public Task<(bool,string)> AddItemAsync(TEntities item);
+        public Task<(bool,string)> RemoveItemAsync(Guid Id);
+        public Task<(bool,string)> SoftRemoveItemAsync(Guid Id);
+        public Task<(TEntities,bool, string)> GetByIdAsync(Guid Id);
+        public Task<(bool,string)> UpdateItemAsync(TEntities newItem);
+        public Task<(IEnumerable<TEntities>, bool, string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null, string? sortField = null, bool isAsc = false, int pageSize = 5, int skip = 1);
+        public Task<(IEnumerable<TEntities>, bool,string)> GetByFilterAsync(Expression<Func<TEntities, bool>>? filter = null, string? includeProperties = null);
         public Task<long> CountAsync(Dictionary<string, string> searchParams, int pageSize = 5);
     }
 }

@@ -6,6 +6,9 @@ namespace Infrastructure
 {
     public class ProTransDbContext : DbContext
     {
+        public ProTransDbContext() // Parameterless constructor for migrations
+        {
+        }
         public ProTransDbContext(DbContextOptions<ProTransDbContext> options) : base(options)
         {
 
@@ -54,6 +57,10 @@ namespace Infrastructure
                 .WithMany(e => e.Employees)
                 .HasForeignKey(e => e.AgencyId)
                 .IsRequired();
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.AssignmentTranslations)
+                .WithOne(e => e.Translator)
+                .HasForeignKey(e => e.TranslatorId);
             //Agency
             modelBuilder.Entity<Agency>()
                 .HasMany(a => a.Employees)
@@ -63,19 +70,12 @@ namespace Infrastructure
                 .HasMany(a => a.Orders)
                 .WithOne(a => a.Agency)
                 .HasForeignKey(a => a.AgencyId);
-            modelBuilder.Entity<Agency>()
-                .HasMany(a => a.RootAgency)
-                .WithOne(ra => ra.RootAgency)
-                .HasForeignKey(ra => ra.RootAgencyId);
-            modelBuilder.Entity<Agency>()
-                .HasMany(a => a.TargetAgency)
-                .WithOne(ta => ta.TargetAgency)
-                .HasForeignKey(ta => ta.TargetAgencyId);
             //Transaction
             modelBuilder.Entity<Transaction>()
                 .HasOne(t => t.User)
                 .WithMany(t => t.Transactions)
                 .HasForeignKey(t => t.UserId)
+                  .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
             modelBuilder.Entity<Transaction>()
                 .HasOne(t => t.Order)
@@ -91,13 +91,15 @@ namespace Infrastructure
             //Distance
             modelBuilder.Entity<Distance>()
                 .HasOne(d => d.RootAgency)
-                .WithMany(r => r.RootAgency)
+                .WithMany(r => r.RootAgencyDistance)
                 .HasForeignKey(r => r.RootAgencyId)
+                  .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
             modelBuilder.Entity<Distance>()
                 .HasOne(d => d.TargetAgency)
-                .WithMany(ta => ta.TargetAgency)
-                .HasForeignKey(ta=>ta.TargetAgencyId)
+                .WithMany(ta => ta.TargetAgencyDistance)
+                .HasForeignKey(ta => ta.TargetAgencyId)
+                  .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
             //Order
             modelBuilder.Entity<Order>()
@@ -105,6 +107,22 @@ namespace Infrastructure
               .WithMany(u => u.Orders)
               .HasForeignKey(o => o.UserId)
               .IsRequired(true);
+            //DocumentType
+            modelBuilder.Entity<DocumentType>()
+               .HasMany(dt => dt.Documents)
+               .WithOne(d => d.DocumentType)
+               .HasForeignKey(d => d.DocumentTypeId)
+               .IsRequired();
+            //AssignmentTranslating
+            modelBuilder.Entity<AssignmentTranslation>()
+                .HasMany(at=> at.Document)
+                .WithOne(d => d.AssignmentTranslation)
+                .HasForeignKey(d=>d.AssignmentTranslationId);
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer("Server=localhost;Database=ProTransRemakeDB;User ID=sa;Password=123123;TrustServerCertificate=True;");
         }
     }
 }

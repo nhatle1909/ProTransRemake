@@ -8,7 +8,7 @@
         //Relationship
         public virtual ICollection<Employee>? Employees { get; set; }
         public virtual ICollection<Order>? Orders { get; set; }
-        public virtual ICollection<Distance>? RootAgency { get; set; }
-        public virtual ICollection<Distance>? TargetAgency { get; set; }
+        public virtual ICollection<Distance>? RootAgencyDistance { get; set; }
+        public virtual ICollection<Distance>? TargetAgencyDistance { get; set; }
     }
 }

@@ -15,8 +15,8 @@ namespace Domain.Entities
         public string? Password { get; set; }
         public DateTime? Dob { get; set; }
         public string? Gender { get; set; }
-        public string Role { get; set; }
+        
 
-        public virtual ICollection<Notification>? Notifications { get; set; }
+        //public virtual ICollection<Notification>? Notifications { get; set; }
     }
 }

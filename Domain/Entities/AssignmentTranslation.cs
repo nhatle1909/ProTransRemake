@@ -8,9 +8,9 @@
         public string? UrlPath { get; set; }
         //Foreignkey
         public Guid? TranslatorId { get; set; }
-        public required Guid DocumentId { get; set; }
+        public required List<Guid> DocumentId { get; set; }
         //Relationship
         public virtual Employee? Translator { get; set; }
-        public virtual Document? Document { get; set; }
+        public virtual ICollection<Document>? Document { get; set; }
     }
 }

@@ -16,13 +16,14 @@
         //Foreignkey
         public Guid? DocumentTypeId { get; set; }
         public Guid? NotarizationId { get; set; }
+        public Guid? AssignmentTranslationId { get; set; }
         public Guid? OrderId { get; set; }
         //Relationship
 
         public virtual Order? Order { get; set; }
         public virtual Notarization? Notarization { get; set; }
         public virtual DocumentType? DocumentType { get; set; }
-        public virtual ICollection<AssignmentTranslation>? AssignmentTranslations { get; set; }
+        public virtual AssignmentTranslation? AssignmentTranslation { get; set; }
         //public virtual ImageShipping? ImageShipping { get; set; }
     }
 }

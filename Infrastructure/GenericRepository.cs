@@ -22,79 +22,79 @@ namespace Infrastructure
             _dbSet = _context.Set<TEntities>();
             _memoryCache = memoryCache;
         }
-        public async Task<bool> AddItemAsync(TEntities item)
+        public async Task<(bool,string)> AddItemAsync(TEntities item)
         {
             try
             {
                 await _dbSet.AddAsync(item);
-                return true;
+                return (true, "Add new item successfully");
             }
             catch(Exception ex)
             {
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(string,bool)> RemoveItemAsync(Guid Id)
+        public async Task<(bool,string)> RemoveItemAsync(Guid Id)
         {
             try
             {
                var query =  await _dbSet.FindAsync(Id);
-               if (query == null) return ("Item not found",false);
+               if (query == null) return (false, "Item not found");
                _dbSet.Remove(query);
-               return ("Deleted Item successfully",true);
+               return (true, "Deleted Item successfully");
             }
             catch(Exception ex)
             {
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(string, bool)> SoftRemoveItemAsync(Guid Id)
+        public async Task<(bool,string)> SoftRemoveItemAsync(Guid Id)
         {
             try
             {
                 var query = await _dbSet.FindAsync(Id);
-                if (query == null || query.IsDeleted == true) return ("Item not found", false);
+                if (query == null || query.IsDeleted == true) return ( false, "Item not found");
                 query.IsDeleted = true;
                 _dbSet.Update(query);
-                return ("Deleted Item successfully", true);
+                return (true, "Deleted Item successfully");
             }
             catch (Exception ex)
             {
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(string, TEntities)> GetByIdAsync(Guid Id)
+        public async Task<(TEntities, bool,string)> GetByIdAsync(Guid Id)
         {
             try
             {
                 var query = await _dbSet.FindAsync(Id);
-                if (query == null) return ("Item not found", null);
-                return ("Retrieved data successfully",query);
+                if (query == null) return ( null, false,"Item not found");
+                return (query, true,"Retrieved data successfully");
             }
             catch ( Exception ex)
             {
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(string,bool)> UpdateItemAsync( TEntities newItem)
+        public async Task<(bool,string)> UpdateItemAsync( TEntities newItem)
         {
             try
             {
                 var query = await _dbSet.FindAsync(newItem.Id);
-                if (query == null) return ("Item not found", false);
+                if (query == null) return ( false, "Item not found");
 
                 newItem.ModifiedDate = DateTime.Now.ToString("d", new CultureInfo("vi-VN"));
 
                 _dbSet.Update(newItem);
                 
-                return ("Updated item successfully", true);
+                return (true,"Updated item successfully");
             }
             catch(Exception ex)
             {
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(IEnumerable<TEntities>,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,bool isAsc = false,int pageSize = 5, int skip=1)
+        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,bool isAsc = false,int pageSize = 5, int skip=1)
         {
             try
             {
@@ -108,7 +108,7 @@ namespace Infrastructure
                     }
                 }
               
-                if (query == null) return (null, "No item found");
+                if (query == null) return (null,false, "No item found");
 
                 if (sortField != null)
                 {
@@ -127,7 +127,7 @@ namespace Infrastructure
                     }
                 }
                 var result = await query.ToListAsync();
-                return (result, "Retrieve data successfully");
+                return (result,true ,"Retrieve data successfully");
                 
             }
             catch(Exception ex)
@@ -135,7 +135,7 @@ namespace Infrastructure
                 throw new ArgumentException(ex.Message);
             }
         } 
-        public async Task<(IEnumerable<TEntities>,string)> GetByFilterAsync(Expression<Func<TEntities,bool>>? filter = null, string? includeProperties = null)
+        public async Task<(IEnumerable<TEntities>,bool,string)> GetByFilterAsync(Expression<Func<TEntities,bool>>? filter = null, string? includeProperties = null)
         {
             try
             {
@@ -150,10 +150,10 @@ namespace Infrastructure
                     }
                 }
 
-                if (query == null) return (null, "No item found");
+                if (query == null) return (null,false ,"No item found");
 
                 var result = await query.ToListAsync();
-                return (result, "Retrieve data successfully");
+                return (result,false ,"Retrieve data successfully");
             }
             catch(Exception ex)
             {
