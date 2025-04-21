@@ -18,6 +18,12 @@ namespace Application.Configuration
 
             config.NewConfig<Employee, QueryEmployeeDTO>();
             config.NewConfig<Employee, CommandEmployeeDTO>();
+
+            config.NewConfig<TranslationSkill, QueryTranslationSkillDTO>();
+            config.NewConfig<TranslationSkill, CommandTranslationSkillDTO>();
+
+            config.NewConfig<TranslationPrice, QueryTranslationPriceDTO>();
+            config.NewConfig<TranslationPrice, CommandTranslationPriceDTO>();
         }
     }
 }

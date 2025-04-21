@@ -15,6 +15,9 @@ namespace Application.Configuration
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+
+            services.AddScoped<ITranslationPriceService, TranslationPriceService>();
+            services.AddScoped<ITranslationSkillService, TranslationSkillService>();
         }
     }
 }
