@@ -20,6 +20,7 @@ namespace Application.Configuration
             services.AddScoped<ITranslationSkillService, TranslationSkillService>();
             services.AddScoped<IAgencyService, AgencyService>();
             services.AddScoped<IAuthService, UserAuthService>();
+
         }
     }
 }

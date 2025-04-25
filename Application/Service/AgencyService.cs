@@ -37,9 +37,21 @@ namespace Application.Service
             return response;
         }
 
-        public Task<ServiceResponse<IEnumerable<QueryAgencyDTO>>> GetPagingAgencies(SearchDTO searchDTO)
+        public async Task<ServiceResponse<IEnumerable<QueryAgencyDTO>>> GetPagingAgencies(SearchDTO searchDTO)
         {
-            throw new NotImplementedException();
+            ServiceResponse<IEnumerable<QueryAgencyDTO>> response = new();
+            try
+            {
+                var result = await _unitOfWork.GetRepository<Agency>().GetPagingAsync(searchDTO.searchParams, searchDTO.includeProperties,
+                                                                                     searchDTO.sortField, searchDTO.pageSize, searchDTO.skip);
+                var resultDTO = result.Item1.Adapt<IEnumerable<QueryAgencyDTO>>();
+                response.Response(resultDTO, result.Item2, result.Item3);
+            }
+            catch (Exception ex)
+            {
+                response.TryCatchResponse(ex);
+            }
+            return response;
         }
 
         public async Task<ServiceResponse<bool>> SoftRemoveAgency(Guid id)

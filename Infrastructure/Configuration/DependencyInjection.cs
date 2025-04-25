@@ -9,7 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.DependencyInjection
+namespace Infrastructure.Configuration
 {
     public static class DependencyInjection
     {
@@ -21,6 +21,7 @@ namespace Infrastructure.DependencyInjection
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             //GenericRepository
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<ISendMailOTPRepository, SendMailOTPRepository>();
             services.AddMemoryCache();
         }
     }

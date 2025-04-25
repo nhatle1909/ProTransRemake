@@ -3,12 +3,60 @@
   "WorkspaceRootPath": "D:\\DevTools\\Repository\\ProTransRemake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\interface\\iservice\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\interface\\iservice\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\translationskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\translationskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\translationpricedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\translationpricedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\searchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\searchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\employedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\employedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\sendmailotprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\sendmailotprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\agencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\agencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +67,24 @@
       "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\userauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\migrations\\protransdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\protransdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\translationskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\translationskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\translationpriceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\translationpriceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\migrations\\protransdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\protransdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\configuration\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,32 +95,12 @@
       "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\interface\\iservice\\itranslationskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\translationpriceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\translationpriceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\searchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\searchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\configuration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\interface\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\interface\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|d:\\devtools\\repository\\protransremake\\infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FEE3160-6A0C-4169-991C-20296F92C6E0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|d:\\devtools\\repository\\protransremake\\application\\dto\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38F07279-71BD-45CD-8DFB-9F99C18E0D2A}|Application\\Application.csproj|solutionrelative:application\\dto\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,24 +110,146 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Interface\\IService\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Application\\Interface\\IService\\IEmailService.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Interface\\IService\\IEmailService.cs",
+              "RelativeToolTip": "Application\\Interface\\IService\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T07:02:06.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\EmailService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\EmailService.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\EmailService.cs",
+              "RelativeToolTip": "Application\\Service\\EmailService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T07:00:57.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UserDTOs.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\UserDTOs.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\UserDTOs.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\UserDTOs.cs",
+              "RelativeToolTip": "Application\\DTO\\UserDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:52:19.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TranslationSkillDTO.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\TranslationSkillDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\TranslationSkillDTO.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\TranslationSkillDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\TranslationSkillDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:52:18.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TranslationPriceDTO.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\TranslationPriceDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\TranslationPriceDTO.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\TranslationPriceDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\TranslationPriceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:52:17.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeDTOs.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\EmployeDTOs.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\EmployeDTOs.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\EmployeDTOs.cs",
+              "RelativeToolTip": "Application\\DTO\\EmployeDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:52:15.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthDTO.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\AuthDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\AuthDTO.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\AuthDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\AuthDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:52:14.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\Configuration\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Configuration\\DependencyInjection.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\Configuration\\DependencyInjection.cs",
+              "RelativeToolTip": "Infrastructure\\Configuration\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:51:18.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SendMailOTPRepository.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\SendMailOTPRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\SendMailOTPRepository.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\SendMailOTPRepository.cs",
+              "RelativeToolTip": "Infrastructure\\SendMailOTPRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:50:23.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AgencyService.cs",
+              "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\AgencyService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\AgencyService.cs",
+              "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\AgencyService.cs",
+              "RelativeToolTip": "Application\\Service\\AgencyService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T06:45:31.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "UserAuthService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\UserAuthService.cs",
               "RelativeDocumentMoniker": "Application\\Service\\UserAuthService.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\UserAuthService.cs",
               "RelativeToolTip": "Application\\Service\\UserAuthService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAFMAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T04:24:59.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T04:24:59.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "AgencyDTO.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\AgencyDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTO\\AgencyDTO.cs",
@@ -99,20 +261,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 18,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\GenericRepository.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\GenericRepository.cs",
               "RelativeToolTip": "Infrastructure\\GenericRepository.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAAEsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:25:31.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:25:31.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 20,
               "Title": "ProTransDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\Migrations\\ProTransDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\ProTransDbContextModelSnapshot.cs",
@@ -124,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "MapperProfile.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Configuration\\MapperProfile.cs",
               "RelativeDocumentMoniker": "Application\\Configuration\\MapperProfile.cs",
@@ -136,19 +297,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "TranslationSkillService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\TranslationSkillService.cs",
               "RelativeDocumentMoniker": "Application\\Service\\TranslationSkillService.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\TranslationSkillService.cs",
               "RelativeToolTip": "Application\\Service\\TranslationSkillService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAmwE0AAABhAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwDwAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T17:20:27.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "ITranslationSkillService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Interface\\IService\\ITranslationSkillService.cs",
               "RelativeDocumentMoniker": "Application\\Interface\\IService\\ITranslationSkillService.cs",
@@ -160,56 +321,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "SearchDTO.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\SearchDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTO\\SearchDTO.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\DTO\\SearchDTO.cs",
               "RelativeToolTip": "Application\\DTO\\SearchDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T17:17:34.885Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "TranslationPriceService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\TranslationPriceService.cs",
               "RelativeDocumentMoniker": "Application\\Service\\TranslationPriceService.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\TranslationPriceService.cs",
               "RelativeToolTip": "Application\\Service\\TranslationPriceService.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAYwE4AAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAYwDwAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T17:14:56.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Configuration\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Application\\Configuration\\DependencyInjection.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Configuration\\DependencyInjection.cs",
               "RelativeToolTip": "Application\\Configuration\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T13:45:03.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Service\\UserService.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\UserService.cs",
               "RelativeToolTip": "Application\\Service\\UserService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAABOAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T13:27:07.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T13:27:07.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Interface\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Application\\Interface\\IUnitOfWork.cs",
@@ -221,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 19,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Interface\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Application\\Interface\\IGenericRepository.cs",
@@ -229,12 +389,11 @@
               "RelativeToolTip": "Application\\Interface\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T13:26:55.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T13:26:55.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Infrastructure\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Infrastructure\\UnitOfWork.cs",
@@ -246,13 +405,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\EmployeeService.cs",
               "RelativeDocumentMoniker": "Application\\Service\\EmployeeService.cs",
               "ToolTip": "D:\\DevTools\\Repository\\ProTransRemake\\Application\\Service\\EmployeeService.cs",
               "RelativeToolTip": "Application\\Service\\EmployeeService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwFoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwEUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T13:17:10.906Z"
             }

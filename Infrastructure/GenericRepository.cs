@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Dynamic.Core;
@@ -95,7 +94,7 @@ namespace Infrastructure
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,bool isAsc = false,int? pageSize = 5, int? skip=1)
+        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,int? pageSize = 5, int? skip=1)
         {
             try
             {
@@ -111,15 +110,16 @@ namespace Infrastructure
               
                 if (query == null) return (null,false, "No item found");
 
-                if (sortField != null)
+                if (sortField != null )
                 {
-                    if (isAsc) query = query.OrderBy($"{sortField} ascending");
-                    else query = query.OrderBy($"{sortField} descending");
+                    if (sortField.StartsWith("!")) query = query.OrderBy($"{sortField} descending");
+                    else query = query.OrderBy($"{sortField} ascending");
                 }
                 //int? to int 
                 var intPageSize = pageSize == null ? 5 : (int)pageSize;
+                var intSkip = skip == null ? 1 : (int)skip;
                 query = query.Take(intPageSize)
-                                 .Skip((skip - 1) * intPageSize);
+                                 .Skip((intSkip - 1) * intPageSize);
 
                 if (includeProperties != null)
                 {

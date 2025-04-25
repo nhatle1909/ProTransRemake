@@ -59,7 +59,7 @@ namespace Application.Service
             try
             {
                 var result = await _unitofwork.GetRepository<Employee>().GetPagingAsync(searchDTO.searchParams, searchDTO.includeProperties,
-                                                                                     searchDTO.sortField, searchDTO.isAsc, searchDTO.pageSize, searchDTO.skip);
+                                                                                     searchDTO.sortField, searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryEmployeeDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);
             }

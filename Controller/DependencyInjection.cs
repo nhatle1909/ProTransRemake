@@ -1,5 +1,5 @@
 ﻿using Application.Configuration;
-using Infrastructure.DependencyInjection;
+using Infrastructure.Configuration;
 
 namespace Controller
 {
