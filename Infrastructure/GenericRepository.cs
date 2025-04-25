@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Dynamic.Core;
@@ -94,7 +95,7 @@ namespace Infrastructure
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,bool isAsc = false,int pageSize = 5, int skip=1)
+        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,bool isAsc = false,int? pageSize = 5, int? skip=1)
         {
             try
             {
@@ -115,8 +116,10 @@ namespace Infrastructure
                     if (isAsc) query = query.OrderBy($"{sortField} ascending");
                     else query = query.OrderBy($"{sortField} descending");
                 }
-                query = query.Take(pageSize)
-                             .Skip((skip - 1) * pageSize);
+                //int? to int 
+                var intPageSize = pageSize == null ? 5 : (int)pageSize;
+                query = query.Take(intPageSize)
+                                 .Skip((skip - 1) * intPageSize);
 
                 if (includeProperties != null)
                 {

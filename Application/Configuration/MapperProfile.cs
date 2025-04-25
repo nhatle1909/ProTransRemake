@@ -24,6 +24,9 @@ namespace Application.Configuration
 
             config.NewConfig<TranslationPrice, QueryTranslationPriceDTO>();
             config.NewConfig<TranslationPrice, CommandTranslationPriceDTO>();
+
+            config.NewConfig<Agency, QueryAgencyDTO>();
+            config.NewConfig<Agency, CommandAgencyDTO>();
         }
     }
 }

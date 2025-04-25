@@ -12,7 +12,7 @@ namespace Application.DTO
         public string? includeProperties { get; set; }
         public string? sortField { get; set; }
         public bool isAsc { get; set; } = false;
-        public int pageSize { get; set; }
-        public int skip { get; set; }
+        public int? pageSize { get; set; }
+        public int? skip { get; set; }
     }
 }
