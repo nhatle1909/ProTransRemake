@@ -1,5 +1,6 @@
 ﻿using Application.Interface.IService;
 using Application.Service;
+using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ namespace Application.Configuration
             services.AddScoped<IAgencyService, AgencyService>();
             services.AddScoped<IAuthService, UserAuthService>();
 
+            //services.AddSingleton(TypeAdapterConfig.GlobalSettings);
+            //services.AddScoped<ITypeAdapter>(sp => sp.GetRequiredService<TypeAdapterConfig>());
         }
     }
 }

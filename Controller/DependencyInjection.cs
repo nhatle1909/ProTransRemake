@@ -12,6 +12,7 @@ namespace Controller
         public static void AddApplicationService(this IServiceCollection services)
         {
             services.AddService();
+            
         }
     }
 }

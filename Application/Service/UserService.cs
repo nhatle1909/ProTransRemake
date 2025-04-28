@@ -16,11 +16,11 @@ namespace Application.Service
     public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapster;
-        public UserService(IUnitOfWork unitOfWork,IMapper mapster)
+  
+        public UserService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapster = mapster;
+            //_mapster = mapster;
         }
         public async Task<ServiceResponse<IEnumerable<QueryUserDTO>>> GetPagingAsync(SearchDTO searchDTO)
         {

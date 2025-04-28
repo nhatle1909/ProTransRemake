@@ -52,7 +52,7 @@ namespace Application.Service
             return response;
         }
 
-        public async Task<ServiceResponse<IEnumerable<QueryTranslationPriceDTO>>> GetAllTranslationPrices(SearchDTO searchDTO)
+        public async Task<ServiceResponse<IEnumerable<QueryTranslationPriceDTO>>> GetPagingAsync(SearchDTO searchDTO)
         {
             ServiceResponse<IEnumerable<QueryTranslationPriceDTO>> response = new();
             try

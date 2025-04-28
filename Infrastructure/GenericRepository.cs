@@ -17,7 +17,7 @@ namespace Infrastructure
     {
         public DbSet<TEntities> _dbSet;
         private IMemoryCache _memoryCache;
-        public GenericRepository(ProTransDbContext _context,IMemoryCache memoryCache)
+        public GenericRepository(DbContext _context,IMemoryCache memoryCache)
         {
             _dbSet = _context.Set<TEntities>();
             _memoryCache = memoryCache;

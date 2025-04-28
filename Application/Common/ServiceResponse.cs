@@ -2,9 +2,9 @@
 {
     public class ServiceResponse<T>
     {
-        private bool Success { get; set; } = false;
-        private T? Result { get; set; }
-        private string Message { get; set; }
+        public bool Success { get; set; } = false;
+        public T? Result { get; set; }
+        public string Message { get; set; }
         public void TryCatchResponse(Exception ex)
         {
             Success = false;
