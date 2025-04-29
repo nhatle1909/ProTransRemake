@@ -42,7 +42,7 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryAgencyDTO>> response = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<Agency>().GetPagingAsync(searchDTO.searchParams, searchDTO.includeProperties,
+                var result = await _unitOfWork.GetRepository<Agency>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue ,searchDTO.includeProperties,
                                                                                      searchDTO.sortField, searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryAgencyDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);
@@ -77,6 +77,7 @@ namespace Application.Service
             try
             {
                 var newItem = commandAgencyDTO.Adapt<Agency>();
+                newItem.Id = id;
                 var result = await _unitOfWork.GetRepository<Agency>().UpdateItemAsync(newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);

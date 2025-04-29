@@ -16,7 +16,10 @@ namespace Infrastructure.Configuration
         public static void AddInfrastructureService(this IServiceCollection services,string connectionString)
         {
          
-            services.AddDbContext<ProTransDbContext>(options =>options.UseSqlServer(connectionString));
+            services.AddDbContext<ProTransDbContext>(options => {
+                options.UseSqlServer(connectionString);
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            });
             //Unitofwork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             //GenericRepository

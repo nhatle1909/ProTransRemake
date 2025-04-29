@@ -13,7 +13,7 @@ namespace Controller.Controllers
         {
             _service = service;
         }
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Create(CommandAgencyDTO commandAgencyDTO)
         {
             var result = await _service.CreateAgency(commandAgencyDTO);

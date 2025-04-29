@@ -58,7 +58,7 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryEmployeeDTO>> response = new();
             try
             {
-                var result = await _unitofwork.GetRepository<Employee>().GetPagingAsync(searchDTO.searchParams, searchDTO.includeProperties,
+                var result = await _unitofwork.GetRepository<Employee>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue ,searchDTO.includeProperties,
                                                                                      searchDTO.sortField, searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryEmployeeDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);

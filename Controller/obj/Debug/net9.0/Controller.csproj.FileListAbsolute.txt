@@ -186,3 +186,7 @@ D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\ru\Microsoft.C
 D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\Scalar.AspNetCore.dll
+D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\DevTools\Repository\ProTransRemake\Controller\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

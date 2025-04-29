@@ -57,7 +57,7 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryTranslationSkillDTO>> response = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<TranslationSkill>().GetPagingAsync(searchDTO.searchParams, searchDTO.includeProperties, searchDTO.sortField,
+                var result = await _unitOfWork.GetRepository<TranslationSkill>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue, searchDTO.includeProperties, searchDTO.sortField,
                                                                                          searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryTranslationSkillDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);

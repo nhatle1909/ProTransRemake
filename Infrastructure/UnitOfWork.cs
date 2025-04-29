@@ -18,10 +18,11 @@ namespace Infrastructure
         {
             _dbContext = dbContext;
             _memoryCache = memoryCache;
+            _repositories = new Dictionary<Type, object>();
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            return;
         }
         public async Task<int> CommitAsync()
         {

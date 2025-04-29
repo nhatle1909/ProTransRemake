@@ -3,7 +3,7 @@
     "ContainingType": "Controller.Controllers.AgencyController",
     "Method": "Create",
     "RelativePath": "Agency",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -62,7 +62,447 @@
     "Parameters": [
       {
         "Name": "searchParams",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "searchValue",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "includeProperties",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "skip",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/Email/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmailController",
+    "Method": "VerifyOTP",
+    "RelativePath": "api/Email/send-verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "otp",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmployeeController",
+    "Method": "Create",
+    "RelativePath": "api/Employee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dob",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AgencyId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmployeeController",
+    "Method": "Update",
+    "RelativePath": "api/Employee/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dob",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AgencyId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmployeeController",
+    "Method": "Get",
+    "RelativePath": "api/Employee/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmployeeController",
+    "Method": "SoftRemove",
+    "RelativePath": "api/Employee/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.EmployeeController",
+    "Method": "Paging",
+    "RelativePath": "api/Employee/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchParams",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "searchValue",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "includeProperties",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "skip",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationPriceController",
+    "Method": "Create",
+    "RelativePath": "api/TranslationPrice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RootLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TargetLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationPriceController",
+    "Method": "Update",
+    "RelativePath": "api/TranslationPrice/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "RootLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TargetLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationPriceController",
+    "Method": "Remove",
+    "RelativePath": "api/TranslationPrice/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationPriceController",
+    "Method": "Paging",
+    "RelativePath": "api/TranslationPrice/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchParams",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "searchValue",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "includeProperties",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "skip",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationSkillController",
+    "Method": "Create",
+    "RelativePath": "api/TranslationSkill",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CertificateUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Language",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TranslatorId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationSkillController",
+    "Method": "Update",
+    "RelativePath": "api/TranslationSkill/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "CertificateUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Language",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TranslatorId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationSkillController",
+    "Method": "Remove",
+    "RelativePath": "api/TranslationSkill/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Controller.Controllers.TranslationSkillController",
+    "Method": "Paging",
+    "RelativePath": "api/TranslationSkill/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchParams",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "searchValue",
+        "Type": "System.String[]",
         "IsRequired": false
       },
       {

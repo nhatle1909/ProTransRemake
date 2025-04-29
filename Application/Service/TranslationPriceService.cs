@@ -57,7 +57,7 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryTranslationPriceDTO>> response = new();
             try
             {
-                var result = await _unitofwork.GetRepository<TranslationPrice>().GetPagingAsync(searchDTO.searchParams,searchDTO.includeProperties,searchDTO.sortField,
+                var result = await _unitofwork.GetRepository<TranslationPrice>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue, searchDTO.includeProperties,searchDTO.sortField,
                                                                                                 searchDTO.pageSize,searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryTranslationPriceDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);

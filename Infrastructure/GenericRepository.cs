@@ -81,12 +81,10 @@ namespace Infrastructure
             try
             {
                 var query = await _dbSet.FindAsync(newItem.Id);
-                if (query == null) return ( false, "Item not found");
-
-                newItem.ModifiedDate = DateTime.Now.ToString("d", new CultureInfo("vi-VN"));
-
-                _dbSet.Update(newItem);
-                
+                if (query == null || query.IsDeleted == true) return ( false, "Item not found");
+                query = newItem;
+                query.ModifiedDate = DateTime.Now.ToString("d", new CultureInfo("vi-VN"));
+                _dbSet.Update(query);
                 return (true,"Updated item successfully");
             }
             catch(Exception ex)
@@ -94,17 +92,26 @@ namespace Infrastructure
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(Dictionary<string, string> searchParams, string? includeProperties = null,string? sortField = null,int? pageSize = 5, int? skip=1)
+        public async Task<(IEnumerable<TEntities>,bool,string)> GetPagingAsync(string[] searchFields,string[] searchValue, string? includeProperties = null,string? sortField = null,int? pageSize = 5, int? skip=1)
         {
             try
             {
                 var query = _dbSet.AsQueryable();
-               
-                if (searchParams != null)
+                if (!string.IsNullOrWhiteSpace(includeProperties))
                 {
-                    foreach (KeyValuePair<string, string> keyValuePair in searchParams) {
-
-                        query = query.Where(string.Format("{0} = {1}", keyValuePair.Key, keyValuePair.Value));
+                    foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.TrimEntries))
+                    {
+                        query = query.Include(includeProperty);
+                    }
+                }
+                if (searchFields.Length == searchValue.Length && searchFields.Length>0)
+                {
+                    for (int i=0;i< searchFields.Length; i++)
+                    {
+                        if (searchValue[i] != null)
+                        {
+                            query = query.Where($"{searchFields[i]}.Contains(@0)", searchValue[i]);
+                        }
                     }
                 }
               
@@ -112,7 +119,7 @@ namespace Infrastructure
 
                 if (sortField != null )
                 {
-                    if (sortField.StartsWith("!")) query = query.OrderBy($"{sortField} descending");
+                    if (sortField.StartsWith("!")) query = query.OrderBy($"{sortField.Substring(1)} descending");
                     else query = query.OrderBy($"{sortField} ascending");
                 }
                 //int? to int 
@@ -121,14 +128,7 @@ namespace Infrastructure
                 query = query.Take(intPageSize)
                                  .Skip((intSkip - 1) * intPageSize);
 
-                if (includeProperties != null)
-                {
-                    foreach (var includeProp in includeProperties.Split(new char[] { ',' },
-                                 StringSplitOptions.RemoveEmptyEntries))
-                    {
-                        query = query.Include(includeProp);
-                    }
-                }
+               
                 var result = await query.ToListAsync();
                 return (result,true ,"Retrieve data successfully");
                 
