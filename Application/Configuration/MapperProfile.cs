@@ -1,11 +1,6 @@
 ﻿using Application.DTO;
 using Domain.Entities;
 using Mapster;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Configuration
 {
@@ -27,6 +22,15 @@ namespace Application.Configuration
 
             config.NewConfig<Agency, QueryAgencyDTO>();
             config.NewConfig<Agency, CommandAgencyDTO>();
+
+            config.NewConfig<Order, QueryOrderDTO>();
+            config.NewConfig<Order, CommandOrderDTO>();
+
+            config.NewConfig<Distance, QueryDistanceDTO>();
+            config.NewConfig<Distance, CommandDistanceDTO>();
+
+            config.NewConfig<Transaction, QueryTransactionDTO>();
+            config.NewConfig<Transaction, CommandTransactionDTO>();
         }
     }
 }

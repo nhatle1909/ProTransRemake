@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class BaseAccount : BaseEntity
     {
@@ -15,7 +9,7 @@ namespace Domain.Entities
         public string? Password { get; set; }
         public DateTime? Dob { get; set; }
         public string? Gender { get; set; }
-        
+
 
         //public virtual ICollection<Notification>? Notifications { get; set; }
     }

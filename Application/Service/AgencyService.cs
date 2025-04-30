@@ -4,11 +4,6 @@ using Application.Interface;
 using Application.Interface.IService;
 using Domain.Entities;
 using Mapster;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Service
 {
@@ -22,10 +17,10 @@ namespace Application.Service
 
         public async Task<ServiceResponse<bool>> CreateAgency(CommandAgencyDTO commandAgencyDTO)
         {
-           ServiceResponse<bool> response = new ServiceResponse<bool>();
+            ServiceResponse<bool> response = new ServiceResponse<bool>();
             try
             {
-               var newItem = commandAgencyDTO.Adapt<Agency>();
+                var newItem = commandAgencyDTO.Adapt<Agency>();
                 var result = await _unitOfWork.GetRepository<Agency>().AddItemAsync(newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
@@ -42,7 +37,7 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryAgencyDTO>> response = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<Agency>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue ,searchDTO.includeProperties,
+                var result = await _unitOfWork.GetRepository<Agency>().GetPagingAsync(searchDTO.searchParams, searchDTO.searchValue, searchDTO.includeProperties,
                                                                                      searchDTO.sortField, searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryAgencyDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);
@@ -71,14 +66,13 @@ namespace Application.Service
             return response;
         }
 
-        public async  Task<ServiceResponse<bool>> UpdateAgency(Guid id, CommandAgencyDTO commandAgencyDTO)
+        public async Task<ServiceResponse<bool>> UpdateAgency(Guid id, CommandAgencyDTO commandAgencyDTO)
         {
             ServiceResponse<bool> response = new();
             try
             {
                 var newItem = commandAgencyDTO.Adapt<Agency>();
-                newItem.Id = id;
-                var result = await _unitOfWork.GetRepository<Agency>().UpdateItemAsync(newItem);
+                var result = await _unitOfWork.GetRepository<Agency>().UpdateItemAsync(id, newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
             }

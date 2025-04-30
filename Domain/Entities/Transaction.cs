@@ -1,9 +1,7 @@
 ﻿namespace Domain.Entities
 {
-    public class Transaction
+    public class Transaction : BaseEntity
     {
-        //Field
-        public Guid Id { get; set; }
         //Foreignkey
         public Guid? UserId { get; set; }
         public Guid OrderId { get; set; }

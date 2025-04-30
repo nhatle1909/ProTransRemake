@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.DTO
+﻿namespace Application.DTO
 {
-     public class SearchDTO
+    public class SearchDTO
     {
         public string[] searchParams { get; set; }
         public string[] searchValue { get; set; }

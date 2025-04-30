@@ -18,7 +18,7 @@ namespace Controller
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "ProTransRemakeAPI", Version = "v1" });
-                
+
             });
             var app = builder.Build();
 
@@ -30,10 +30,10 @@ namespace Controller
                 app.MapSwagger();
                 app.UseSwagger();
                 app.UseSwaggerUI();
-                
+
 
             }
-            
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

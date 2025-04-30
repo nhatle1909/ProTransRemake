@@ -7,20 +7,20 @@ using Mapster;
 
 namespace Application.Service
 {
-    public class TranslationSkillService : ITranslationSkillService
+    public class DistanceService : IDistanceService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public TranslationSkillService(IUnitOfWork unitOfWork)
+        public DistanceService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<ServiceResponse<bool>> AddTranslationSkill(CommandTranslationSkillDTO translationSkillDTO)
+        public async Task<ServiceResponse<bool>> AddDistance(CommandDistanceDTO distanceDTO)
         {
             ServiceResponse<bool> response = new();
             try
             {
-                var newItem = translationSkillDTO.Adapt<TranslationSkill>();
-                var result = await _unitOfWork.GetRepository<TranslationSkill>().AddItemAsync(newItem);
+                var newItem = distanceDTO.Adapt<Distance>();
+                var result = await _unitOfWork.GetRepository<Distance>().AddItemAsync(newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
             }
@@ -30,13 +30,12 @@ namespace Application.Service
             }
             return response;
         }
-
-        public async Task<ServiceResponse<bool>> DeleteTranslationSkill(Guid id)
+        public async Task<ServiceResponse<bool>> DeleteDistance(Guid id)
         {
             ServiceResponse<bool> response = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<TranslationSkill>().RemoveItemAsync(id);
+                var result = await _unitOfWork.GetRepository<Distance>().RemoveItemAsync(id);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
             }
@@ -46,15 +45,14 @@ namespace Application.Service
             }
             return response;
         }
-
-        public async Task<ServiceResponse<IEnumerable<QueryTranslationSkillDTO>>> GetPagingAsync(SearchDTO searchDTO)
+        public async Task<ServiceResponse<IEnumerable<QueryDistanceDTO>>> GetPagingAsync(SearchDTO searchDTO)
         {
-            ServiceResponse<IEnumerable<QueryTranslationSkillDTO>> response = new();
+            ServiceResponse<IEnumerable<QueryDistanceDTO>> response = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<TranslationSkill>().GetPagingAsync(searchDTO.searchParams, searchDTO.searchValue, searchDTO.includeProperties, searchDTO.sortField,
-                                                                                         searchDTO.pageSize, searchDTO.skip);
-                var resultDTO = result.Item1.Adapt<IEnumerable<QueryTranslationSkillDTO>>();
+                var result = await _unitOfWork.GetRepository<Distance>().GetPagingAsync(searchDTO.searchParams, searchDTO.searchValue, searchDTO.includeProperties, searchDTO.sortField,
+                    searchDTO.pageSize, searchDTO.skip);
+                var resultDTO = result.Item1.Adapt<IEnumerable<QueryDistanceDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);
             }
             catch (Exception ex)
@@ -63,14 +61,13 @@ namespace Application.Service
             }
             return response;
         }
-
-        public async Task<ServiceResponse<bool>> UpdateTranslationSkill(Guid id, CommandTranslationSkillDTO translationSkillDTO)
+        public async Task<ServiceResponse<bool>> UpdateDistance(Guid id, CommandDistanceDTO distanceDTO)
         {
             ServiceResponse<bool> response = new();
             try
             {
-                var newItem = translationSkillDTO.Adapt<TranslationSkill>();
-                var result = await _unitOfWork.GetRepository<TranslationSkill>().UpdateItemAsync(id, newItem);
+                var newItem = distanceDTO.Adapt<Distance>();
+                var result = await _unitOfWork.GetRepository<Distance>().UpdateItemAsync(id, newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
             }

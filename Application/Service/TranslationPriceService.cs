@@ -4,18 +4,13 @@ using Application.Interface;
 using Application.Interface.IService;
 using Domain.Entities;
 using Mapster;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Service
 {
     public class TranslationPriceService : ITranslationPriceService
     {
         private readonly IUnitOfWork _unitofwork;
-        public TranslationPriceService(IUnitOfWork unitOfWork) 
+        public TranslationPriceService(IUnitOfWork unitOfWork)
         {
             _unitofwork = unitOfWork;
         }
@@ -27,7 +22,7 @@ namespace Application.Service
                 var newItem = translationPriceDTO.Adapt<TranslationPrice>();
                 var result = await _unitofwork.GetRepository<TranslationPrice>().AddItemAsync(newItem);
                 await _unitofwork.CommitAsync();
-                response.Response(result.Item1,result.Item1,result.Item2);
+                response.Response(result.Item1, result.Item1, result.Item2);
             }
             catch (Exception ex)
             {
@@ -43,7 +38,7 @@ namespace Application.Service
             {
                 var result = await _unitofwork.GetRepository<TranslationPrice>().RemoveItemAsync(id);
                 await _unitofwork.CommitAsync();
-                response.Response(result.Item1, result.Item1,result.Item2);
+                response.Response(result.Item1, result.Item1, result.Item2);
             }
             catch (Exception ex)
             {
@@ -57,8 +52,8 @@ namespace Application.Service
             ServiceResponse<IEnumerable<QueryTranslationPriceDTO>> response = new();
             try
             {
-                var result = await _unitofwork.GetRepository<TranslationPrice>().GetPagingAsync(searchDTO.searchParams,searchDTO.searchValue, searchDTO.includeProperties,searchDTO.sortField,
-                                                                                                searchDTO.pageSize,searchDTO.skip);
+                var result = await _unitofwork.GetRepository<TranslationPrice>().GetPagingAsync(searchDTO.searchParams, searchDTO.searchValue, searchDTO.includeProperties, searchDTO.sortField,
+                                                                                                searchDTO.pageSize, searchDTO.skip);
                 var resultDTO = result.Item1.Adapt<IEnumerable<QueryTranslationPriceDTO>>();
                 response.Response(resultDTO, result.Item2, result.Item3);
             }
@@ -75,8 +70,7 @@ namespace Application.Service
             try
             {
                 var newItem = translationPriceDTO.Adapt<TranslationPrice>();
-                newItem.Id = id;
-                var result = await _unitofwork.GetRepository<TranslationPrice>().UpdateItemAsync(newItem);
+                var result = await _unitofwork.GetRepository<TranslationPrice>().UpdateItemAsync(id, newItem);
                 await _unitofwork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
             }

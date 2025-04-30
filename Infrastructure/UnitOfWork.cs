@@ -1,11 +1,6 @@
 ﻿using Application.Interface;
 using Domain.Entities;
 using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure
 {
@@ -14,7 +9,7 @@ namespace Infrastructure
         private readonly Dictionary<Type, object> _repositories;
         private readonly IMemoryCache _memoryCache;
         private readonly ProTransDbContext _dbContext;
-        public UnitOfWork(ProTransDbContext dbContext,IMemoryCache memoryCache)
+        public UnitOfWork(ProTransDbContext dbContext, IMemoryCache memoryCache)
         {
             _dbContext = dbContext;
             _memoryCache = memoryCache;

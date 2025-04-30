@@ -8,8 +8,8 @@ namespace Controller.Controllers
     [Route("[controller]")]
     public class AgencyController : ControllerBase
     {
-       private readonly IAgencyService _service;
-       public AgencyController(IAgencyService service)
+        private readonly IAgencyService _service;
+        public AgencyController(IAgencyService service)
         {
             _service = service;
         }

@@ -1,6 +1,5 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Infrastructure
 {
@@ -13,7 +12,7 @@ namespace Infrastructure
         {
 
         }
-    
+
         public DbSet<User> Users { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Agency> Agencies { get; set; }
@@ -21,15 +20,15 @@ namespace Infrastructure
         public DbSet<Document> Documents { get; set; }
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<Transaction> Transactions {get;set;}
-        public DbSet<TranslationPrice> TranslationPrices { get; set;}
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<TranslationPrice> TranslationPrices { get; set; }
         public DbSet<TranslationSkill> TranslationSkills { get; set; }
         public DbSet<AssignmentNotarization> AssignmentNotarizations { get; set; }
         public DbSet<AssignmentShipping> AssignmentShippings { get; set; }
         public DbSet<AssignmentTranslation> AssignmentTranslations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           //User
+            //User
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
@@ -45,10 +44,10 @@ namespace Infrastructure
                 .WithOne(u => u.User)
                 .HasForeignKey(u => u.UserId)
                 .IsRequired();
-           //Employee
-           modelBuilder.Entity<Employee>()
-                 .HasIndex(u => u.Email)
-                .IsUnique();
+            //Employee
+            modelBuilder.Entity<Employee>()
+                  .HasIndex(u => u.Email)
+                 .IsUnique();
             modelBuilder.Entity<Employee>()
                 .HasIndex(u => u.PhoneNumber)
                 .IsUnique();
@@ -65,7 +64,7 @@ namespace Infrastructure
             modelBuilder.Entity<Agency>()
                 .HasMany(a => a.Employees)
                 .WithOne(a => a.Agency)
-                .HasForeignKey(a=>a.AgencyId);
+                .HasForeignKey(a => a.AgencyId);
             modelBuilder.Entity<Agency>()
                 .HasMany(a => a.Orders)
                 .WithOne(a => a.Agency)
@@ -115,9 +114,9 @@ namespace Infrastructure
                .IsRequired();
             //AssignmentTranslating
             modelBuilder.Entity<AssignmentTranslation>()
-                .HasMany(at=> at.Document)
+                .HasMany(at => at.Document)
                 .WithOne(d => d.AssignmentTranslation)
-                .HasForeignKey(d=>d.AssignmentTranslationId);
+                .HasForeignKey(d => d.AssignmentTranslationId);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

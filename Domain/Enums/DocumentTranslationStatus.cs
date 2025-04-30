@@ -1,10 +1,10 @@
 ﻿namespace Domain.Enums
 {
-	public enum DocumentTranslationStatus
-	{
-		Waiting,
-		Processing,
-		Translating,
-		Translated
-	}
+    public enum DocumentTranslationStatus
+    {
+        Waiting,
+        Processing,
+        Translating,
+        Translated
+    }
 }

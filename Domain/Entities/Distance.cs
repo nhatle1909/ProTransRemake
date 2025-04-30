@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class Distance : BaseEntity
     {
         //Field
-        public required decimal Value {  get; set; }
+        public required decimal Value { get; set; }
         //Foreignkey
         public required Guid RootAgencyId { get; set; }
         public required Guid TargetAgencyId { get; set; }

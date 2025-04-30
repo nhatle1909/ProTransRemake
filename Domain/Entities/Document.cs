@@ -9,10 +9,10 @@
         public required string RootLanguage { get; set; }
         public required string TargetLanguage { get; set; }
         public int PageNumber { get; set; }
-        public int NumberOfCopies { get; set; } 
+        public int NumberOfCopies { get; set; }
         public int NumberOfNotarizedCopies { get; set; }
         public required string Status { get; set; }
-       
+
         //Foreignkey
         public Guid? DocumentTypeId { get; set; }
         public Guid? NotarizationId { get; set; }

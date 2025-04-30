@@ -1,12 +1,6 @@
 ﻿using Application.Interface.IService;
 using Application.Service;
-using Mapster;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Configuration
 {
@@ -21,7 +15,9 @@ namespace Application.Configuration
             services.AddScoped<ITranslationSkillService, TranslationSkillService>();
             services.AddScoped<IAgencyService, AgencyService>();
             services.AddScoped<IAuthService, UserAuthService>();
-
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IDistanceService, DistanceService>();
+            services.AddScoped<ITransactionService, TransactionService>();
             //services.AddSingleton(TypeAdapterConfig.GlobalSettings);
             //services.AddScoped<ITypeAdapter>(sp => sp.GetRequiredService<TypeAdapterConfig>());
         }

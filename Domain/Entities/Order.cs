@@ -3,8 +3,8 @@
     public class Order : BaseEntity
     {
         //Field
-        public required string OrderCode {  get; set; }
-       
+        public required string OrderCode { get; set; }
+
         public bool ShipRequest { get; set; }
         public bool PickUpRequest { get; set; }
         public required DateTime Deadline { get; set; }

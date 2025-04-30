@@ -18,7 +18,7 @@ namespace Controller.Controllers
             return result.Success ? Ok(result) : BadRequest(result);
         }
         [HttpPost("send-verify")]
-        public async Task<IActionResult> VerifyOTP([FromBody] string email,string otp)
+        public async Task<IActionResult> VerifyOTP([FromBody] string email, string otp)
         {
             var result = await _service.VerifyOTP(email, otp);
             return result.Success ? Ok(result) : BadRequest(result);
