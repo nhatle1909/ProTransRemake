@@ -20,6 +20,7 @@ namespace Application.Service
             try
             {
                 var newItem = commandEmployeeDTO.Adapt<Employee>();
+
                 var result = await _unitofwork.GetRepository<Employee>().AddItemAsync(newItem);
                 await _unitofwork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
@@ -90,6 +91,20 @@ namespace Application.Service
                 var result = await _unitofwork.GetRepository<Employee>().UpdateItemAsync(id, newItem);
                 await _unitofwork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
+            }
+            catch (Exception ex)
+            {
+                response.TryCatchResponse(ex);
+            }
+            return response;
+        }
+        public async Task<ServiceResponse<long>> CountAsync(CountDTO countDTO)
+        {
+            ServiceResponse<long> response = new();
+            try
+            {
+                var result = await _unitofwork.GetRepository<Employee>().CountAsync(countDTO.searchParams,countDTO.searchValue, countDTO.pageSize);
+                response.Response(result, result > 0, string.Empty);
             }
             catch (Exception ex)
             {

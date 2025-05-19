@@ -19,6 +19,7 @@ namespace Application.Service
             try
             {
                 var newItem = orderDTO.Adapt<Order>();
+                newItem.Status = Domain.Enums.OrderStatus.Pending;
                 var result = await _unitOfWork.GetRepository<Order>().AddItemAsync(newItem);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
@@ -112,11 +113,36 @@ namespace Application.Service
             try
             {
                 var query = await _unitOfWork.GetRepository<Order>().GetByIdAsync(id);
+
                 var order = query.Item1;
-                order.Status = status;
+                //string to enum
+                if (Enum.TryParse(typeof(Domain.Enums.OrderStatus), status, out var orderStatus))
+                {
+                    order.Status = (Domain.Enums.OrderStatus)orderStatus;
+                }
+                else
+                {
+                    response.Response(false, false, "Invalid status");
+                    return response;
+                }
+
                 var result = await _unitOfWork.GetRepository<Order>().UpdateItemAsync(id, order);
                 await _unitOfWork.CommitAsync();
                 response.Response(result.Item1, result.Item1, result.Item2);
+            }
+            catch (Exception ex)
+            {
+                response.TryCatchResponse(ex);
+            }
+            return response;
+        }
+        public async Task<ServiceResponse<long>> CountAsync(CountDTO countDTO)
+        {
+            ServiceResponse<long> response = new();
+            try
+            {
+                var result = await _unitOfWork.GetRepository<Order>().CountAsync(countDTO.searchParams, countDTO.searchValue, countDTO.pageSize);
+                response.Response(result, result > 0, string.Empty);
             }
             catch (Exception ex)
             {

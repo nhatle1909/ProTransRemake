@@ -2,11 +2,12 @@
 {
     public enum OrderStatus
     {
+        Pending,
         Processing,
-        Implementing,
-        Completed,
-        Delivering,
-        Delivered,
-        Canceled
+        Accepted,
+        Translating,
+        Notarizing,
+        Shipping,
+        Rejected,
     }
 }

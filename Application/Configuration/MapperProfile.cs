@@ -31,6 +31,9 @@ namespace Application.Configuration
 
             config.NewConfig<Transaction, QueryTransactionDTO>();
             config.NewConfig<Transaction, CommandTransactionDTO>();
+
+            config.NewConfig<Document, QueryDocumentDTO>();
+            config.NewConfig<Document, CommandDocumentDTO>();
         }
     }
 }

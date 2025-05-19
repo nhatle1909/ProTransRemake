@@ -2,6 +2,7 @@
 {
     public class QueryTransactionDTO
     {
+
     }
     public class CommandTransactionDTO
     {

@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using Domain.Enums;
+
+namespace Domain.Entities
 {
     public class Order : BaseEntity
     {
@@ -9,7 +11,7 @@
         public bool PickUpRequest { get; set; }
         public required DateTime Deadline { get; set; }
         public required decimal TotalPrice { get; set; }
-        public required string Status { get; set; }
+        public required OrderStatus Status { get; set; }
         public required string Reason { get; set; }
 
         //Foreignkey

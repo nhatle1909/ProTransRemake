@@ -82,7 +82,21 @@ namespace Application.Service
             }
             return response;
         }
-        // Implement methods from IAgencyService here
 
+        public async Task<ServiceResponse<long>> CountAsync(CountDTO countDTO)
+        {
+            ServiceResponse<long> serviceResponse = new();
+            try
+            {
+                var result = await _unitOfWork.GetRepository<Agency>().CountAsync(countDTO.searchParams, countDTO.searchValue, countDTO.pageSize);
+                serviceResponse.Response(result, result > 0, string.Empty);
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.TryCatchResponse(ex);
+            }
+            return serviceResponse;
+
+        }
     }
 }

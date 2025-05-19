@@ -77,5 +77,19 @@ namespace Application.Service
             }
             return response;
         }
+        public async Task<ServiceResponse<long>> CountAsync(CountDTO countDTO)
+        {
+            ServiceResponse<long> response = new();
+            try
+            {
+                var result = await _unitOfWork.GetRepository<Distance>().CountAsync(countDTO.searchParams, countDTO.searchValue, countDTO.pageSize);
+                response.Response(result, result > 0, string.Empty);
+            }
+            catch (Exception ex)
+            {
+                response.TryCatchResponse(ex);
+            }
+            return response;
+        }
     }
 }

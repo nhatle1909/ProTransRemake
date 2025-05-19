@@ -158,22 +158,26 @@ namespace Infrastructure
                 throw new ArgumentException(ex.Message);
             }
         }
-        public async Task<long> CountAsync(Dictionary<string, string> searchParams, int pageSize = 5)
+        public async Task<long> CountAsync(string[]? searchFields, string[]? searchValue, int? pageSize = 5)
         {
             try
             {
                 var query = _dbSet.AsQueryable();
 
-                if (searchParams != null)
+                if (searchFields.Length == searchValue.Length && searchFields.Length > 0)
                 {
-                    foreach (KeyValuePair<string, string> keyValuePair in searchParams)
+                    for (int i = 0; i < searchFields.Length; i++)
                     {
-
-                        query = query.Where(string.Format("{0} = {1}", keyValuePair.Key, keyValuePair.Value));
+                        if (searchValue[i] != null)
+                        {
+                            query = query.Where($"{searchFields[i]}.Contains(@0)", searchValue[i]);
+                        }
                     }
                 }
+                
+                var intPageSize = pageSize == null ? 5 : (int)pageSize;
                 float count = await query.CountAsync();
-                return (long)MathF.Ceiling(count / pageSize);
+                return (long)MathF.Ceiling(count / intPageSize);
             }
             catch (Exception ex)
             {
