@@ -37,5 +37,11 @@ namespace Controller.Controllers
             var result = await _service.GetPagingAgencies(searchDTO);
             return result.Success ? Ok(result) : BadRequest(result);
         }
+        [HttpGet("count")]
+        public async Task<IActionResult> CountAgencies([FromQuery] CountDTO countDTO)
+        {
+            var result = await _service.CountAsync(countDTO);
+            return result.Success ? Ok(result) : BadRequest(result);
+        }
     }
 }

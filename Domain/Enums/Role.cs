@@ -8,9 +8,9 @@ namespace Domain.Enums
 {
     public enum Role
     {
-        Admin,
-        Manager,
-        Translator,
-        Deliverer
+        Admin = 1,
+        Manager = 2,
+        Translator = 3,
+        Deliverer = 4
     }
 }

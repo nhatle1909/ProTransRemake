@@ -1,0 +1,15 @@
+D:\DevTools\Repository\ProTransRemake\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\DevTools\Repository\ProTransRemake\Domain\bin\Debug\net9.0\Domain.runtimeconfig.json
+D:\DevTools\Repository\ProTransRemake\Domain\bin\Debug\net9.0\Domain.dll
+D:\DevTools\Repository\ProTransRemake\Domain\bin\Debug\net9.0\Domain.pdb
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.dll
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.pdb
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\Domain.genruntimeconfig.cache
+D:\DevTools\Repository\ProTransRemake\Domain\obj\Debug\net9.0\ref\Domain.dll

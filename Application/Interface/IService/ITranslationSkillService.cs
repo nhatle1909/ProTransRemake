@@ -9,6 +9,6 @@ namespace Application.Interface.IService
         public Task<ServiceResponse<bool>> AddTranslationSkill(CommandTranslationSkillDTO translationSkillDTO);
         public Task<ServiceResponse<bool>> UpdateTranslationSkill(Guid id, CommandTranslationSkillDTO translationSkillDTO);
         public Task<ServiceResponse<bool>> DeleteTranslationSkill(Guid id);
-
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }

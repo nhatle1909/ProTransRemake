@@ -10,5 +10,6 @@ namespace Application.Interface.IService
         public Task<ServiceResponse<bool>> UpdateEmployeeInfo(Guid id, CommandEmployeeDTO commandEmployeeDTO);
         public Task<ServiceResponse<IEnumerable<QueryEmployeeDTO>>> GetPagingAsync(SearchDTO searchDTO);
         public Task<ServiceResponse<bool>> SoftRemoveEmployee(Guid id);
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }

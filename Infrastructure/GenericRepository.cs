@@ -78,6 +78,7 @@ namespace Infrastructure
                 var query = await _dbSet.FindAsync(id);
                 if (query == null || query.IsDeleted == true) return (false, "Item not found");
                 query = newItem;
+                query.Id = id; // Ensure the ID remains the same
                 query.ModifiedDate = DateTime.Now.ToString("d", new CultureInfo("vi-VN"));
                 _dbSet.Update(query);
                 return (true, "Updated item successfully");

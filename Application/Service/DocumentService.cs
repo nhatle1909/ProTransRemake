@@ -1,13 +1,14 @@
 ﻿using Application.Common;
 using Application.DTO;
 using Application.Interface;
+using Application.Interface.IService;
 using Domain.Entities;
 using Mapster;
 
 
 namespace Application.Service
 {
-    public class DocumentService
+    public class DocumentService :  IDocumentService
     {
         private readonly IUnitOfWork _unitOfWork;
         public DocumentService(IUnitOfWork unitOfWork)
@@ -20,9 +21,9 @@ namespace Application.Service
             try
             {
                 var document = commandDocumentDTO.Adapt<Document>();
-                await _unitOfWork.GetRepository<Document>().AddItemAsync(document);
+                var result = await _unitOfWork.GetRepository<Document>().AddItemAsync(document);
                 await _unitOfWork.CommitAsync();
-
+                serviceResponse.Response(result.Item1, result.Item1, result.Item2);
             }
             catch (Exception ex)
             {
@@ -30,13 +31,13 @@ namespace Application.Service
             }
             return serviceResponse;
         }
-        public async Task<ServiceResponse<bool>> UpdateDocument(Guid id,CommandDocumentDTO commandDocumentDTO)
+        public async Task<ServiceResponse<bool>> UpdateDocument(Guid id, CommandDocumentDTO commandDocumentDTO)
         {
             ServiceResponse<bool> serviceResponse = new();
             try
             {
                 var document = commandDocumentDTO.Adapt<Document>();
-                var result = await _unitOfWork.GetRepository<Document>().UpdateItemAsync(id,document);
+                var result = await _unitOfWork.GetRepository<Document>().UpdateItemAsync(id, document);
                 await _unitOfWork.CommitAsync();
                 serviceResponse.Response(result.Item1, result.Item1, result.Item2);
             }
@@ -107,12 +108,12 @@ namespace Application.Service
             }
             return serviceResponse;
         }
-        public async Task<ServiceResponse<long>> CountDocuments(CountDTO countDTO)
+        public async Task<ServiceResponse<long>> CountAsync(CountDTO countDTO)
         {
             ServiceResponse<long> serviceResponse = new();
             try
             {
-                var result = await _unitOfWork.GetRepository<Document>().CountAsync(countDTO.searchParams,countDTO.searchValue,countDTO.pageSize);
+                var result = await _unitOfWork.GetRepository<Document>().CountAsync(countDTO.searchParams, countDTO.searchValue, countDTO.pageSize);
                 serviceResponse.Response(result, result > 0, string.Empty);
             }
             catch (Exception ex)

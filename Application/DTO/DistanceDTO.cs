@@ -2,7 +2,10 @@
 {
     public class QueryDistanceDTO
     {
-
+        public required Guid Id { get; set; }
+        public required string RootAgencyAddress { get; set; }
+        public required string TargetAgencyAddress { get; set; }
+        public required decimal Value { get; set; }
     }
     public class CommandDistanceDTO
     {

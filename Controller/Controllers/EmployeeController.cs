@@ -42,5 +42,11 @@ namespace Controller.Controllers
             var result = await _service.SoftRemoveEmployee(id);
             return result.Success ? Ok(result) : BadRequest(result);
         }
+        [HttpGet("count")]
+        public async Task<IActionResult> Count([FromQuery] CountDTO countDTO)
+        {
+            var result = await _service.CountAsync(countDTO);
+            return result.Success ? Ok(result) : BadRequest(result);
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Application.Interface.IService
         Task<ServiceResponse<bool>> DeleteDistance(Guid id);
         Task<ServiceResponse<IEnumerable<QueryDistanceDTO>>> GetPagingAsync(SearchDTO searchDTO);
         Task<ServiceResponse<bool>> UpdateDistance(Guid id, CommandDistanceDTO distanceDTO);
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }

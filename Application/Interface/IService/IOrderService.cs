@@ -12,5 +12,6 @@ namespace Application.Service
         Task<ServiceResponse<bool>> SoftRemoveOrder(Guid id);
         Task<ServiceResponse<bool>> UpdateOrder(Guid id, CommandOrderDTO orderDTO);
         Task<ServiceResponse<bool>> UpdateOrderStatus(Guid id, string status);
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }

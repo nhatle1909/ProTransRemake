@@ -9,5 +9,6 @@ namespace Application.Interface.IService
         public Task<ServiceResponse<bool>> AddTranslationPrice(CommandTranslationPriceDTO translationPriceDTO);
         public Task<ServiceResponse<bool>> UpdateTranslationPrice(Guid id, CommandTranslationPriceDTO translationPriceDTO);
         public Task<ServiceResponse<bool>> DeleteTranslationPrice(Guid id);
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }

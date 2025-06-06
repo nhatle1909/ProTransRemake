@@ -10,5 +10,6 @@ namespace Application.Interface.IService
         public Task<ServiceResponse<bool>> SoftRemoveUser(Guid id);
         public Task<ServiceResponse<bool>> UpdateProfile(Guid id, CommandUserDTO commandUserDTO);
         public Task<ServiceResponse<QueryUserDTO>> GetUserInfo(Guid id);
+        Task<ServiceResponse<long>> CountAsync(CountDTO countDTO);
     }
 }
